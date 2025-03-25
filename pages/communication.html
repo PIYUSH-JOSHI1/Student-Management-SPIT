@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIT Event Planner - Communication</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="flex h-screen bg-gray-100">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../images/spit-logo.png" alt="SPIT Logo" class="logo">
+                <h2>SPIT Event Planner</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="../index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="marketing.html"><i class="fas fa-bullhorn"></i> PR & Marketing</a>
+                    </li>
+                    <li>
+                        <a href="tasks.html"><i class="fas fa-tasks"></i> Task Allocation</a>
+                    </li>
+                    <li class="active">
+                        <a href="communication.html"><i class="fas fa-comments"></i> Communication</a>
+                    </li>
+                    <li>
+                        <a href="events.html"><i class="fas fa-calendar-alt"></i> Event Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="analytics.html"><i class="fas fa-chart-bar"></i> Analytics</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto">
+            <header class="top-header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search messages...">
+                </div>
+                <div class="user-menu">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="../images/user-avatar.png" alt="User">
+                        <span>Admin User</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <h1>Communication</h1>
+                    <div class="actions">
+                        <button class="btn btn-outline-primary me-2"><i class="fas fa-envelope"></i> New Message</button>
+                        <button class="btn btn-primary"><i class="fas fa-bullhorn"></i> New Announcement</button>
+                    </div>
+                </div>
+
+                <div class="communication-container">
+                    <!-- Communication Sidebar -->
+                    <div class="communication-sidebar">
+                        <div class="comm-tabs">
+                            <button class="comm-tab active" data-tab="messages">
+                                <i class="fas fa-comment-alt"></i> Messages
+                            </button>
+                            <button class="comm-tab" data-tab="announcements">
+                                <i class="fas fa-bullhorn"></i> Announcements
+                            </button>
+                            <button class="comm-tab" data-tab="chatbot">
+                                <i class="fas fa-robot"></i> AI Assistant
+                            </button>
+                        </div>
+                        
+                        <div class="comm-search">
+                            <input type="text" placeholder="Search...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        
+                        <div class="comm-list">
+                            <div class="comm-item active">
+                                <div class="comm-avatar">
+                                    <img src="../images/user-avatar.png" alt="User">
+                                    <span class="status-indicator online"></span>
+                                </div>
+                                <div class="comm-details">
+                                    <h4>Tech Fest Team</h4>
+                                    <p>Let's finalize the schedule for...</p>
+                                </div>
+                                <div class="comm-meta">
+                                    <span class="comm-time">10:30 AM</span>
+                                    <span class="comm-badge">3</span>
+                                </div>
+                            </div>
+                            <div class="comm-item">
+                                <div class="comm-avatar">
+                                    <img src="../images/user-avatar.png" alt="User">
+                                    <span class="status-indicator offline"></span>
+                                </div>
+                                <div class="comm-details">
+                                    <h4>Cultural Committee</h4>
+                                    <p>The venue has been confirmed...</p>
+                                </div>
+                                <div class="comm-meta">
+                                    <span class="comm-time">Yesterday</span>
+                                </div>
+                            </div>
+                            <div class="comm-item">
+                                <div class="comm-avatar">
+                                    <img src="../images/user-avatar.png" alt="User">
+                                    <span class="status-indicator away"></span>
+                                </div>
+                                <div class="comm-details">
+                                    <h4>Workshop Coordinators</h4>
+                                    <p>All speakers have confirmed...</p>
+                                </div>
+                                <div class="comm-meta">
+                                    <span class="comm-time">Sep 20</span>
+                                </div>
+                            </div>
+                            <div class="comm-item announcement">
+                                <div class="comm-avatar">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <div class="comm-details">
+                                    <h4>Registration Open!</h4>
+                                    <p>Tech Fest 2023 registrations are now...</p>
+                                </div>
+                                <div class="comm-meta">
+                                    <span class="comm-time">Sep 18</span>
+                                </div>
+                            </div>
+                            <div class="comm-item announcement">
+                                <div class="comm-avatar">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <div class="comm-details">
+                                    <h4>Venue Change</h4>
+                                    <p>The Cultural Festival venue has been...</p>
+                                </div>
+                                <div class="comm-meta">
+                                    <span class="comm-time">Sep 15</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Chat Area -->
+                    <div class="chat-area">
+                        <div class="chat-header">
+                            <div class="chat-user">
+                                <div class="chat-avatar">
+                                    <img src="../images/user-avatar.png" alt="User">
+                                    <span class="status-indicator online"></span>
+                                </div>
+                                <div class="chat-user-details">
+                                    <h3>Tech Fest Team</h3>
+                                    <p>5 members • 3 online</p>
+                                </div>
+                            </div>
+                            <div class="chat-actions">
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-phone"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-video"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-messages">
+                            <div class="message-date-divider">
+                                <span>Today</span>
+                            </div>
+                            
+                            <div class="message received">
+                                <div class="message-avatar">
+                                    <img src="../images/user-avatar.png" alt="User">
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-sender">John Doe</span>
+                                        <span class="message-time">10:15 AM</span>
+                                    </div>
+                                    <div class="message-body">
+                                        <p>Hi team, we need to finalize the schedule for the Tech Fest. Can everyone share their availability for a meeting tomorrow?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="message received">
+                                <div class="message-avatar">
+                                    <img src="../images/user-avatar.png" alt="User">
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-sender">Jane Smith</span>
+                                        <span class="message-time">10:18 AM</span>
+                                    </div>
+                                    <div class="message-body">
+                                        <p>I'm available after 2 PM tomorrow.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="message sent">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-time">10:20 AM</span>
+                                    </div>
+                                    <div class="message-body">
+                                        <p>I can join anytime after 3 PM. Also, I've uploaded the latest budget spreadsheet to the shared folder.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="message received">
+                                <div class="message-avatar">
+                                    <img src="../images/user-avatar.png" alt="User">
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-sender">Alex Johnson</span>
+                                        <span class="message-time">10:25 AM</span>
+                                    </div>
+                                    <div class="message-body">
+                                        <p>3 PM works for me too. Here's the draft of the event schedule:</p>
+                                        <div class="message-attachment">
+                                            <i class="fas fa-file-pdf"></i>
+                                            <span>Tech_Fest_Schedule_Draft.pdf</span>
+                                            <a href="#" class="download-btn"><i class="fas fa-download"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="message received">
+                                <div class="message-avatar">
+                                    <img src="../images/user-avatar.png" alt="User">
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-sender">John Doe</span>
+                                        <span class="message-time">10:30 AM</span>
+                                    </div>
+                                    <div class="message-body">
+                                        <p>Great! Let's meet tomorrow at 3 PM then. I'll send a calendar invite to everyone.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-input">
+                            <button class="attachment-btn"><i class="fas fa-paperclip"></i></button>
+                            <input type="text" placeholder="Type a message...">
+                            <button class="emoji-btn"><i class="fas fa-smile"></i></button>
+                            <button class="send-btn"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Chatbot Card (Hidden by default, shown when AI Assistant tab is clicked) -->
+                <div class="ai-chatbot-card" style="display: none;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>AI Event Assistant</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="ai-chat-container">
+                                <div class="ai-chat-messages">
+                                    <div class="ai-message">
+                                        <div class="ai-avatar">
+                                            <i class="fas fa-robot"></i>
+                                        </div>
+                                        <div class="ai-message-content">
+                                            <p>Hello! I'm your AI Event Assistant. How can I help you with your event planning today?</p>
+                                        </div>
+                                    </div>
+                                    <div class="user-message">
+                                        <div class="user-message-content">
+                                            <p>I need help creating a schedule for the Tech Fest</p>
+                                        </div>
+                                    </div>
+                                    <div class="ai-message">
+                                        <div class="ai-avatar">
+                                            <i class="fas fa-robot"></i>
+                                        </div>
+                                        <div class="ai-message-content">
+                                            <p>I'd be happy to help you create a schedule for the Tech Fest! Here are some questions to get started:</p>
+                                            <ol>
+                                                <li>What are the dates for the Tech Fest?</li>
+                                                <li>How many tracks or parallel sessions do you plan to have?</li>
+                                                <li>What are the main events (workshops, talks, competitions, etc.)?</li>
+                                                <li>Do you have any keynote speakers confirmed?</li>
+                                            </ol>
+                                            <p>Once you provide this information, I can suggest a draft schedule structure.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ai-chat-input">
+                                    <input type="text" placeholder="Ask me anything about event planning...">
+                                    <button class="ai-send-btn"><i class="fas fa-paper-plane"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/communication.js"></script>
+</body>
+</html>
+
